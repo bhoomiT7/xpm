@@ -1,15 +1,29 @@
-ion-menu-button {
-  color: var(--ion-color-primary);
+.full-page-content {
+  height: 100vh; /* 100% of the viewport height */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
+.no-scroll {
+  --overflow: hidden;
+}
 
+/* Optional: If you want to hide the scrollbar completely */
+.ion-content::-webkit-scrollbar {
+  display: none;
+}
 #container {
-  text-align: center;
+  overflow: hidden;
+  text-align: left;
   position: absolute;
   left: 0;
   right: 0;
   top: 50%;
+  width: 100%;
   transform: translateY(-50%);
+  font-family: "Montserrat", Helvetica, Arial, serif;
 }
 
 #container strong {
@@ -20,68 +34,143 @@ ion-menu-button {
 #container p {
   font-size: 16px;
   line-height: 22px;
+
   color: #8c8c8c;
+
   margin: 0;
 }
 
 #container a {
   text-decoration: none;
 }
-.table{
-  border: 1px solid lightgray;
-  margin-top:10px;
-  border-bottom: none;
-  border-radius: 10px;
+
+.icon-container {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 5px !important;
+}
+
+.card-container {
+  display: flex;
+  flex-wrap: nowrap; 
+  align-items: left; 
+  overflow-x: auto; 
+  
+}
+.mt-5{
+  margin-top:5px;
+}
+
+.ion-card {
+  flex: 0 0 auto; 
+  
+}
+.image-container {
+  position: relative;
+}
+
+.main-img {
+  height: 60vh;
+  width: 100%;
+  max-height: 60vh;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+ 
+}
+
+.main-img:hover {
+  transform: scale(1.1);
+}
+.header-img{
+  padding: 0px 5px 0px 5px;
 }
 .box{
-  border:1px solid gray;
-  width:120px;
-  height: 15px;
-
-}
-.box-align{
-  align-items: right;
-}
-.heading{
-  font-size: 15px;
-  font-weight: bold;
-  background-color: lightgray;
-}
-.table-row {
-  border-bottom: 1px solid #000; 
+  border: 1px solid gray;
   width: 100%;
-
+  border-radius: 5px;
+ 
 }
 
-  .example-content {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100%;
+.flex-container {
+  display: flex;
+  justify-content: end;
+  margin-right:12px;
+  padding:10px;
+}
+.ion-text-center {
+  text-align: center;
+}
+
+.ion-margin-top {
+  margin-top: 20px; 
+}
+.ion-text-center {
+  text-align: center;
+}
+.tex{
+  font-family: "Montserrat", Helvetica, Arial, serif;
+}
+
+
+
+h1 {
+  font-family: "Montserrat", Helvetica, Arial, serif;
+  font-size: 28px;
+  color: #ff6600; 
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); 
+  animation: pulse 1.5s infinite; 
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
   }
-  .btn{
-  margin-left:20px;
-  margin-bottom: 20px;
+  50% {
+    transform: scale(1.1);
   }
-  .cardeffect {
-    height: 200px;
-    transition: height 1s ease; /* Define the transition property */
-    border:1px solid gray;
-    box-shadow: 0px 0px 15px gray;
- 
-    z-index: 1;
+  100% {
+    transform: scale(1);
   }
-  
-  .cardeffect::after {
-    content:'';
-    position:absolute;
-    background: linear-gradient(red,blue
-    
-    );
-    z-index: -1;
-    border: 3px solid #7986CB;
-    border-radius: 80px 30px;
-    height: 420px;
-  }
-  
+}
+.centered-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.custom-image {
+  width: 50%; 
+  height: 50%; 
+}
+.btnsign{
+  margin-top:30px;
+  border-radius: 10px;
+  width: 100%;
+}
+.check{
+  border: none;
+}
+
+.check {
+  display: flex;
+  align-items: center;
+}
+
+
+input[type="checkbox"] {
+  margin-top: 10px;
+  margin-right: 10px;
+  margin-left: 15px;
+
+}
+.remember{
+  margin-top: 10px;
+}
+
+
+
+
+
+
+
 
